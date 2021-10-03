@@ -1,0 +1,65 @@
+.CardRight{
+    display: flex;
+    flex-direction: column;
+    padding: 65px 40px 100px 40px;
+    align-items: center;
+}
+
+.CardRight span{
+    color: #8748f0;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 85px;
+}
+
+@media (max-width: 991px) {
+    .CardRight{
+        padding-bottom: 80px;
+    }
+
+    .CardRight span{
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 555px) {
+    .CardRight{
+        padding: 45px 25px 70px 25px;
+    }
+
+    .CardRight span{
+        margin-bottom: 75px;
+    }
+}
+
+@media (max-width: 400px) {
+    .CardRight{
+        padding: 45px 15px 60px 15px;
+    }
+
+    .CardRight span{
+        font-size: 25px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 320px) {
+    .CardRight{
+        padding: 35px 10px 40px 10px;
+    }
+
+    .CardRight span{
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 1024px) and (max-height: 800px){
+    .CardRight{
+        padding: 40px 30px 50px 30px;
+    }
+
+    .CardRight span{
+        margin-bottom: 50px;
+    }
+}

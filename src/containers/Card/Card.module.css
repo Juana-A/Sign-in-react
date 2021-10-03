@@ -1,0 +1,57 @@
+html {
+    font-family: "Manrope", sans-serif;
+    background-color: #ccc;
+}
+
+.CardContainer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #ccc;
+    justify-content: center;
+}
+
+
+.Card {
+    width: 90%;
+    height: 90%;
+    max-width: 1200px;
+    max-height: 700px;
+    background-color: white;
+    border-radius: 29px;
+    box-shadow: 2px 3px 4px rgba(33, 37, 71, 0.4);
+    overflow: hidden;
+}
+
+.NoPadding {
+    padding: 0 !important;
+}
+
+
+@media (max-width: 991px) {
+    .CardContainer{
+        height: 100%;
+    }
+    .Card {
+        max-height: unset;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 320px){
+    .Card{
+        width: 95%;
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 992px) and (max-height: 800px){
+    .CardContainer{
+        height: 100%;
+    }
+
+    .Card{
+        width: 75%;
+        margin: 40px 0;
+    }
+}

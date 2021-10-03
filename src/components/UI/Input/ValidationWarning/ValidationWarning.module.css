@@ -1,0 +1,9 @@
+.Warning{
+    font-size: 12px;
+    color: #f73c2e;
+    text-align: left;
+}
+
+.Invisible{
+    display: none;
+}
