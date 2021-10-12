@@ -1,4 +1,4 @@
-.Button{
+.LoginBtn{
     background-image: linear-gradient(106deg, #3badf5, #8748f0 89%);
     border: none;
     border-radius: 30px;
@@ -9,17 +9,45 @@
     outline: none;
     align-self: center;
     margin-top: 40px;
+    text-decoration: none;
 }
 
-.Button:disabled{
+.LoginBtn:disabled{
     background-image: none;
     background-color: #ccc;
     cursor: not-allowed;
 }
 
 @media (max-width: 400px) {  
-    .Button{
+    .LoginBtn{
         font-size: 16px;
         margin-top: 30px;
     }
+}
+
+.ToolbarBtn {
+    background-color: rgb(255 255 255 / 31%);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 20px;
+}
+
+.ToolbarBtn:hover{
+    background-color: rgb(68 68 68 / 31%);
+}
+
+.ModalBtn{
+    background-color: rgb(192, 192, 192);
+    border: none;
+    border-radius: 20px;
+    padding: 5px 37px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.ModalBtn:hover{
+    background-image: linear-gradient(106deg, #3badf5, #8748f0 89%);
+    color: white;
 }

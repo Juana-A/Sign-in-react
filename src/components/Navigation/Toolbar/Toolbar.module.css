@@ -1,0 +1,27 @@
+.Header{
+    height: 50px;
+    width: 100%;
+    background-color:  rgb(80 79 79 / 41%);
+    padding: 5px 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo{
+    width: 32px;
+    height: 32px;
+}
+
+.Title{
+    font-size: 35px;
+    font-family: 'Signika Negative', sans-serif;
+    color: rgb(249 249 249 / 62%);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 767px){
+    .Logo{
+        display: none;
+    }
+}

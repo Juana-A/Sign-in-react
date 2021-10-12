@@ -2,11 +2,13 @@ import { Component } from "react";
 import classes from './LoginForm.module.css';
 import Button from '../../UI/Button/Button';
 import Input from "../../UI/Input/Input";
+import { withRouter } from "react-router";
 
 class LoginForm extends Component {
     state = {
         loginForm: {
             email: {
+                inputType: 'input',
                 elementConfig: {
                     type: 'text',
                     placeholder: 'Email'
@@ -24,6 +26,7 @@ class LoginForm extends Component {
                 touched: false
             },
             password: {
+                inputType: 'input',
                 elementConfig: {
                     type: 'password',
                     placeholder: 'Password'
@@ -70,9 +73,18 @@ class LoginForm extends Component {
             updatedForm[formElementIdentifier] = updatedFormElement;
             this.setState({ loginForm: updatedForm });
         }
+
         if (this.state.formIsValid) {
-            alert('Successfully Signed In');
-            console.log(account);
+            const queryParams=[];
+            for(let i in account){
+                queryParams.push(encodeURIComponent(i) + "=" + encodeURIComponent(account[i]));
+            }
+           
+            const queryString =  queryParams.join('&');
+            this.props.history.push({
+                pathname : "/todo",
+                search: "?" + queryString
+            });
         }
     }
 
@@ -187,12 +199,13 @@ class LoginForm extends Component {
             });
         }
 
-
         return (
             <form onSubmit={this.signupHandler} className={classes.LoginForm}>
                 {elements.map(element => (
                     <Input
                         key={element.id}
+                        parent='cardright'
+                        elementType={element.config.inputType}
                         label={element.id}
                         elementConfig={element.config.elementConfig}
                         value={element.config.value}
@@ -203,10 +216,10 @@ class LoginForm extends Component {
                         error={element.config.error}
                         iconCLick={iconClickHanlder} />
                 ))}
-                <Button>Sign In</Button>
+                <Button design="login">Sign In</Button>
             </form>
         );
     }
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);

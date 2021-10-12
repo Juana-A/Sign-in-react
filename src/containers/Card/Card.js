@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import classes from './Card.module.css';
 import CardLeft from "../../components/CardLeft/CardLeft";
 import CardRight from "../../components/CardRight/CardRight";
+import { withRouter } from "react-router";
 
 class Card extends Component {
     render() {
@@ -18,4 +19,4 @@ class Card extends Component {
     }
 }
 
-export default Card;
+export default withRouter(Card);

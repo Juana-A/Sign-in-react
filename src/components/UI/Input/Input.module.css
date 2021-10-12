@@ -1,5 +1,13 @@
 .Input {
     width: 100%;
+ 
+}
+
+.SmallMargin{
+    margin-bottom: 35px;
+}
+
+.LargeMargin{
     margin-bottom: 70px;
 }
 
@@ -24,9 +32,15 @@
     border: 0.5px solid #5b5b5bb2;
     border-radius: 6px;
     background-color: white;
-    padding: 14px 11px;
+    padding: 12px 11px;
     display: block; 
     margin-bottom: 10px; 
+}
+
+textarea {
+    min-height: 120px;
+    resize: none;
+    overflow-y: scroll;
 }
 
 .InputElement::placeholder {

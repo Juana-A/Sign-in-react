@@ -1,0 +1,11 @@
+.Title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;    
+}
+
+.Buttons{
+    /* padding: 0 20px; */
+    display: flex;
+    justify-content: space-around;
+}
